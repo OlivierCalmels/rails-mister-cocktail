@@ -1,0 +1,27 @@
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+</div>
+</div>
+<div class="container">
+  <h2>Ingredients</h2>
+  <ul>
+      <% @cocktail.doses.each do |d| %>
+        <li>
+        <%= d.ingredient.name %> - <%= d.description %> 
+        <%= link_to dose_path(d), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+        </li>
+      <% end %>
+  </ul>
+  <div>
+
+  <%= link_to "Back to cocktails",   cocktails_path, class: 'btn btn-primary' %>
+  </div>
+  <%= link_to "Add a new dose",   new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<%= render partial: "./doses/new.html.erb" %>
+
+
