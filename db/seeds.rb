@@ -30,11 +30,11 @@ end
 puts 'Ingrédients importés'
 
 # Cocktails
-p tgv = Cocktail.create!(name: "Mojito")
-p tgv.id
-p Dose.create!(description: "5cl", ingredient: ingredient_finder("Dark rum"),  cocktail_id: tgv.id)
+Cocktail.create!(name: "Mojito")
+Cocktail.create!(name: "Marinetto")
+Cocktail.create!(name: "Mojito2")
+Cocktail.create!(name: "Marinetto2")
+# p Dose.create!(description: "5cl", ingredient: ingredient_finder("Dark rum"),  cocktail_id: tgv.id)
 
-p tgv = Cocktail.create!(name: "Marinetto")
-p tgv.id
-p Dose.create!(description: "2l", ingredient_id: ingredient_finder("Dark rum"),  cocktail_id: tgv.id)
-p Dose.create!(description: "10cl", ingredient_id: ingredient_finder("Dark rum"),  cocktail_id: tgv.id)
+
+# p Dose.create!(description: "2l", ingredient_id: ingredient_finder("Brandy"),  cocktail_id: cock.id)

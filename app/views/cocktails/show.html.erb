@@ -1,7 +1,6 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
 </div>
-</div>
 <div class="container">
   <h2>Ingredients</h2>
   <ul>
@@ -16,12 +15,11 @@
   </ul>
   <div>
 
+ <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+  <div>
+  <%= render partial: "./doses/new.html.erb" %>
+  </div>
+
   <%= link_to "Back to cocktails",   cocktails_path, class: 'btn btn-primary' %>
-  </div>
-  <%= link_to "Add a new dose",   new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
-  </div>
-</div>
-
-<%= render partial: "./doses/new.html.erb" %>
-
 
